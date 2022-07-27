@@ -1,9 +1,4 @@
-img {
-    display: block;
-    margin: auto;
-    width: 500px;
-}
-
-.title {
-    text-align: center;
+.button {
+    display: flex;
+    justify-content: center;
 }
