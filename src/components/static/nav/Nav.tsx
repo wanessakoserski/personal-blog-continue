@@ -6,14 +6,14 @@ function Navbar() {
   return (
     <>
         <AppBar position="static">
-            <Toolbar variant="dense">
+            <Toolbar variant="dense" className="nav-main">
                 <Box style={{ cursor: "pointer" }}>
                     <Typography variant="h5" color="inherit">
-                        BlogPessoal
+                        Blog Pessoal
                     </Typography>
                 </Box>
 
-                <Box className="nav">
+                <Box className="nav-tool">
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
                             home
