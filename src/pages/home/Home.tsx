@@ -1,5 +1,6 @@
 import React from 'react';
-import { Box, Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
+import { Box } from "@mui/material";
 import './Home.css';
 
 function Home() {

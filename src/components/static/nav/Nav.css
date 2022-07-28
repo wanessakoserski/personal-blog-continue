@@ -6,6 +6,7 @@
 
 .nav-tool {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 50%;
+    gap: 6%;
 }

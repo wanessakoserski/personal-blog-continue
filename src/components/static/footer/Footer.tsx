@@ -1,7 +1,8 @@
 import React from 'react';
 import LinkedIn from '@material-ui/icons/LinkedIn';
 import { GitHub } from '@material-ui/icons';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography} from '@material-ui/core';
+import { Box } from "@mui/material";
 import './Footer.css';
 
 function Footer() {
