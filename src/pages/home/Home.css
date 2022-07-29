@@ -1,4 +1,50 @@
-.button {
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,500;1,300&display=swap');
+
+* {
+    text-decoration: none;
+    color: #fac7e8;
+    font-family: 'Saira', sans-serif;
+}
+
+.home-main {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 205px);
+    background-color: #fac7e8;
+}
+
+.button-main {
     display: flex;
     justify-content: center;
+    font-family: 'Saira', sans-serif;
+    margin: 50px;
+}
+
+.MuiButton-outlined {
+    border: 2px solid #973b66 !important;
+    padding: 5px 50px !important;
+}
+
+.button a {
+    color: #973b66 !important;
+    font-weight: bold;
+}
+
+.title {
+    color: #973b66;
+    font-family: 'Saira', sans-serif;
+    
+}
+
+.message {
+    color: #fac7e8;
+    font-family: 'Saira', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.MuiTypography-h3 {
+    font-family: 'Saira', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 330% !important;
 }

@@ -9,7 +9,7 @@ function Navbar() {
         <AppBar position="static">
             <Toolbar variant="dense" className="nav-main">
                 <Box style={{ cursor: "pointer" }}>
-                    <Typography variant="h5" color="inherit">
+                    <Typography variant="h5" color="inherit" className="name">
                         Blog Pessoal
                     </Typography>
                 </Box>
@@ -17,27 +17,37 @@ function Navbar() {
                 <Box className="nav-tool">
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
-                            home
+                            <a>
+                                home
+                            </a>
                         </Typography>
                     </Box>
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
-                            postagens
+                            <a>
+                                postagens
+                            </a>
                         </Typography>
                     </Box>
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
-                            temas
+                            <a>
+                                temas
+                            </a>
                         </Typography>
                     </Box>
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
-                            novo tema
+                            <a>
+                                novo tema
+                            </a>
                         </Typography>
                     </Box>
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
-                            logout
+                            <a>
+                                logout
+                            </a>
                         </Typography>
                     </Box>
                 </Box>

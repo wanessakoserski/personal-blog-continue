@@ -10,27 +10,25 @@ function Footer() {
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center">
                 <Grid alignItems="center" item xs={12}>
-                    <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
-                            <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais </Typography>
+                    <Box style={{ backgroundColor: "#973b66", height: "72px" }} className='social'>
+                        <Box paddingTop={1} display="none" alignItems="center" justifyContent="center">
+                            <Typography variant="h6" align="center" gutterBottom style={{ color: "#fac7e8" }}></Typography>
                         </Box>
                         <Box className='social'>
                             <a href="https://www.linkedin.com/in/wanessa-koserski-dos-santos/" target="_blank">
-                                <LinkedIn style={{ fontSize: 50, color: "white" }} />
+                                <LinkedIn style={{ fontSize: 50, color: "#fac7e8" }} />
                             </a>
                             <a href="https://github.com/wanessakoserski" target="_blank">
-                                <GitHub style={{ fontSize: 40, color: "white" }} />
+                                <GitHub style={{ fontSize: 40, color: "#fac7e8" }} />
                             </a>
                         </Box>
                     </Box>
-                    <Box style={{ backgroundColor: "#303F9F", height: "60px" }}>
+                    <Box style={{ backgroundColor: "#973b66", height: "68px" }}>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >© 2020 Copyright:</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "#fac7e8" }} >© 2022</Typography>
                         </Box>
                         <Box>
-                            <a target="_blank" href="https://brasil.generation.org">
-                                <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">Wanessa Koserski dos Santos</Typography>
-                            </a>
+                            <Typography variant="subtitle2" gutterBottom style={{ color: "#fac7e8" }} align="center">Wanessa Koserski dos Santos</Typography>
                         </Box>
                     </Box>
                 </Grid>

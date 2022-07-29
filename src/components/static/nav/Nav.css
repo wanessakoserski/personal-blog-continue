@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,500;1,300&display=swap');
+
 .nav-main {
+    background-color: #973b66;
+    color: #fac7e8;
     display: flex;
-    justify-content: space-between;
     gap: 5px;
+    height: 8vh;
+    justify-content: space-between;
 }
 
 .nav-tool {
     display: flex;
-    justify-content: flex-end;
-    width: 50%;
     gap: 6%;
+    justify-content: flex-end;
+    width: 78%;
+}
+
+.MuiTypography-h5 {
+    font-family: 'Saira', sans-serif !important;
+}
+
+.nav-tool a {
+    font-family: 'Saira', sans-serif;
 }
