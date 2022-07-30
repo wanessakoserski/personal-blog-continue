@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,300;0,500;1,300&display=swap');
+
+.text-decorator-none {
+    text-decoration: none;
+}
+
+.MuiTypography-colorTextPrimary {
+    color: #973b66 !important;
+}
+
+.MuiButton-containedPrimary {
+    background-color: #973b66 !important;
+}
+
+.mine-text {
+    color: #973b66;
+}
+
+.MuiTypography-subtitle1 {
+    font-family: 'Saira', sans-serif !important;
+}
+
+.part {
+    background-color: #fac7e8;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-l44j74 {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+
+.card{
+    margin-left: 10%;
+    width: 340px;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #db9fc688;
+
+    border-radius: 20px;
+    border: 7px solid #973b66;
+}
+
+label{
+    color: #973b66 !important;
+    font-weight: bold !important;
+}
+
+.MuiInput-underline:before{
+    border-bottom: 2px solid #e8d69d!important;
+}
+
+.MuiInput-underline:after{
+    border-bottom: 2px solid #e8d69d!important;
+}
+
+.MuiInputBase-input {
+    background-color: #973b662c !important;
+    border-color: #973b66;
+}
+
+.MuiInputBase-root {
+    color: #973b66 !important;
+    font-family: 'Saira', sans-serif !important;
+}
+
+.MuiInput-underline {
+    border:5px solid #973b66 !important;
+}

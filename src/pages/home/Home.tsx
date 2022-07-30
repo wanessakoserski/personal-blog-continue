@@ -5,7 +5,7 @@ import './Home.css';
 
 function Home() {
     return (
-        <>
+      <>
         <Grid
           container
           direction="row"

@@ -16,10 +16,11 @@
     width: 78%;
 }
 
+.MuiTypography-h6 {
+    font-family: 'Saira', sans-serif !important;
+}
+
 .MuiTypography-h5 {
     font-family: 'Saira', sans-serif !important;
 }
 
-.nav-tool a {
-    font-family: 'Saira', sans-serif;
-}

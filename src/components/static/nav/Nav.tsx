@@ -1,9 +1,10 @@
 import React from "react";
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from "@mui/material";
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
-function Navbar() {
+function Nav() {
   return (
     <>
         <AppBar position="static">
@@ -15,13 +16,14 @@ function Navbar() {
                 </Box>
 
                 <Box className="nav-tool">
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            <a>
-                                home
-                            </a>
-                        </Typography>
-                    </Box>
+                    <Link to='/home'>
+                        <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                                    home
+                            </Typography>
+                        </Box>
+                    </Link>
+                    
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
                             <a>
@@ -43,13 +45,13 @@ function Navbar() {
                             </a>
                         </Typography>
                     </Box>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            <a>
-                                logout
-                            </a>
-                        </Typography>
-                    </Box>
+                    <Link to='/'>
+                        <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                                    logout
+                            </Typography>
+                        </Box>
+                    </Link>
                 </Box>
             </Toolbar>
         </AppBar>
@@ -57,4 +59,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Nav;

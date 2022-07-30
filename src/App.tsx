@@ -1,18 +1,25 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/static/nav/Nav';
 import Footer from './components/static/footer/Footer';
-import Home from './pages/home/Home'
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
 import './App.css';
 
 function App() {
-  return (
-    <>
+  return(
+    <Router>
       <Nav />
-      <Home />
+        <div style={{ height: 'calc(100vh - 150px)' }}>
+          <Routes> 
+            <Route path="/home" element={ <Home /> } />
+            <Route path="/" element={ <Login /> } />
+          </Routes>
+        </div>
       <Footer />
-    </>
-  );
+    </Router>
+    )
 }
 
 export default App;
