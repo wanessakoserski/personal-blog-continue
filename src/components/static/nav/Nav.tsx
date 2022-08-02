@@ -38,13 +38,15 @@ function Nav() {
                             </a>
                         </Typography>
                     </Box>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            <a>
-                                novo tema
-                            </a>
-                        </Typography>
-                    </Box>
+                   
+                        <Box mx={1} style={{ cursor: "pointer" }}>
+                            <Typography variant="h6" color="inherit">
+                                <a>
+                                    novo tema
+                                </a>
+                            </Typography>
+                        </Box>
+                   
                     <Link to='/'>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">

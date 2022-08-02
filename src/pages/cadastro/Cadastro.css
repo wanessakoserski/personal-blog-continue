@@ -1,0 +1,15 @@
+.imagem-cadastro {
+    background-image: url();
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.box-cadastro-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

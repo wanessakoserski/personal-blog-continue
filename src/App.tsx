@@ -5,6 +5,7 @@ import Nav from './components/static/nav/Nav';
 import Footer from './components/static/footer/Footer';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
+import Cadastro from './pages/cadastro/Cadastro';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Routes> 
             <Route path="/home" element={ <Home /> } />
             <Route path="/" element={ <Login /> } />
+            <Route path='/cadastro' element={ <Cadastro /> } />
           </Routes>
         </div>
       <Footer />

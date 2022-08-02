@@ -38,6 +38,7 @@ function Login() {
                             name='senha'
                             margin='normal'
                             className='form-input'
+                            type='password'
                             fullWidth 
                         />
                         <Box marginTop={2} textAlign='center'>
@@ -56,7 +57,9 @@ function Login() {
                         <Box marginRight={1}>
                             <Typography variant='subtitle1' gutterBottom align='center' className="mine-text">Não tem uma conta?</Typography>
                         </Box>
+                        <Link to='/cadastro'>
                             <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }} className="mine-text">Cadastra-se</Typography>
+                        </Link>
                     </Box>
                 </Box>
             </Grid>
