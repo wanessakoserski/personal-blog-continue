@@ -11,7 +11,7 @@ function Cadastro() {
 
     let history = useNavigate();
     const [confirmarSenha, setConfirmarSenha] = useState<String>("")
-    
+
     const [user, setUser] = useState<Usuario>(
         {
             id: 0,
@@ -32,7 +32,7 @@ function Cadastro() {
 
     useEffect(() => {
         if (userResult.id != 0) {
-            history("/home")
+            history('/login')
         }
     }, [userResult])
 
@@ -52,8 +52,9 @@ function Cadastro() {
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+        console.log(user)
         if(confirmarSenha == user.senha){
-            cadastrar (`/usuario/cadastrar`, user, setUserResult)
+            cadastrar(`/usuario/cadastrar`, user, setUserResult)
             alert('Usuario cadastrado com sucesso')
         }else {
             alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
@@ -137,9 +138,11 @@ function Cadastro() {
                             fullWidth 
                         />
                         <Box marginTop={2} textAlign='center' className='box-cadastro-button'>
-                            <Button variant='contained' color='secondary' className="form-btn">
-                                Cancelar
-                            </Button>
+                            <Link to='/login' className='text-decorator-none'>
+                                <Button variant='contained' color='secondary' className="form-btn">
+                                    Cancelar
+                                </Button>
+                            </Link>
                             <Button type='submit' variant='contained' color='primary' className="form-btn">
                                 Cadastrar
                             </Button>

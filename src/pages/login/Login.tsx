@@ -26,7 +26,7 @@ function Login() {
         })
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         if(token != '') {
             history('/home')
         }

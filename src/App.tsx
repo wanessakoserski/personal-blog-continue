@@ -7,16 +7,21 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Cadastro from './pages/cadastro/Cadastro';
 import './App.css';
+import ListaTema from './components/tema/listatema/ListaTema';
+import ListaPostagem from './components/postagem/listapostagem/ListaPostagem';
 
 function App() {
   return(
     <Router>
       <Nav />
         <div style={{ height: 'calc(100vh - 150px)' }}>
-          <Routes> 
-            <Route path="/home" element={ <Home /> } />
+          <Routes>
             <Route path="/" element={ <Login /> } />
-            <Route path='/cadastro' element={ <Cadastro /> } />
+            <Route path="/home" element={ <Home /> } />
+            <Route path="/login" element={ <Login /> } />
+            <Route path="/cadastro" element={ <Cadastro /> } />
+            <Route path="/temas" element={ <ListaTema /> } />
+            <Route path="/posts" element={ <ListaPostagem /> } />
           </Routes>
         </div>
       <Footer />
