@@ -1,10 +1,48 @@
-import React from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Button, Grid, TextField, Typography } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import useLocalStorage from 'react-use-localstorage';
+import { login } from '../../services/Service';
 import { Box } from "@mui/material";
 import './Login.css';
+import UsuarioLogin from '../../models/UsuarioLogin';
 
 function Login() {
+
+    let history = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
+
+    const [userLogin, setUserLogin] = useState<UsuarioLogin>({
+        nome: '',
+        email: '',
+        senha: '',
+        token: ''
+    })
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+        setUserLogin({
+            ...userLogin,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    useEffect(()=> {
+        if(token != '') {
+            history('/home')
+        }
+    }, [token])
+
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try{
+            await login (`usuario/login`, userLogin, setToken)
+
+            alert('Usuário logado com sucesso')
+        } catch(error){
+            alert('Dados do usuário incorretos. Erro ao logar.')
+        }        
+    }
+
     return(
         <Grid container
             className="part"
@@ -12,7 +50,7 @@ function Login() {
         >
             <Grid alignItems='center' xs={6} >
                 <Box paddingX={20} className="card">
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <Typography 
                             variant='h3'
                             gutterBottom
@@ -23,15 +61,19 @@ function Login() {
                             >LogIn
                         </Typography>
                         <TextField 
-                            id='usuario'
+                            value={userLogin.email}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            id='email'
                             label='e-mail'
                             variant='outlined'
-                            name='usuario'
+                            name='email'
                             margin='normal'
                             className='form-input'
                             fullWidth 
                         />
                         <TextField 
+                            value={userLogin.senha}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id='senha'
                             label='senha'
                             variant='outlined'
@@ -41,12 +83,10 @@ function Login() {
                             type='password'
                             fullWidth 
                         />
-                        <Box marginTop={2} textAlign='center'>
-                            <Link to='/home' className='text-decorator-none'>
-                                <Button type='submit' variant='contained' color='primary' className="form-btn">
-                                    Logar
-                                </Button>
-                            </Link>
+                        <Box marginTop={2} textAlign='center'>                           
+                            <Button type='submit' variant='contained' color='primary' className="form-btn">
+                                Logar
+                            </Button>    
                         </Box>
                     </form>
                     <Box 

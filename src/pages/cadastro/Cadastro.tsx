@@ -1,10 +1,65 @@
-import React from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react';
 import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from "@mui/material";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Usuario from '../../models/Usuario';
+import { cadastrar } from '../../services/Service';
 import './Cadastro.css';
 
 function Cadastro() {
+
+    let history = useNavigate();
+    const [confirmarSenha, setConfirmarSenha] = useState<String>("")
+    
+    const [user, setUser] = useState<Usuario>(
+        {
+            id: 0,
+            nome: '',
+            email: '',
+            senha: '',
+            birthday: ''
+        })
+
+    const [userResult, setUserResult] = useState<Usuario>(
+        {
+            id: 0,
+            nome: '',
+            email: '',
+            senha: '',
+            birthday: ''
+        })
+
+    useEffect(() => {
+        if (userResult.id != 0) {
+            history("/home")
+        }
+    }, [userResult])
+
+
+    function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
+        setConfirmarSenha(e.target.value)
+    }
+
+
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
+
+        setUser({
+            ...user,
+            [e.target.name]: e.target.value
+        })
+
+    }
+    async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
+        e.preventDefault()
+        if(confirmarSenha == user.senha){
+            cadastrar (`/usuario/cadastrar`, user, setUserResult)
+            alert('Usuario cadastrado com sucesso')
+        }else {
+            alert('Dados inconsistentes. Favor verificar as informações de cadastro.')
+        }
+    }
+
     return(
         <>
             <Grid 
@@ -25,7 +80,7 @@ function Cadastro() {
                     xs={6}
                     alignItems='center'
                 >
-                    <form>
+                    <form onSubmit={onSubmit}>
                         <Typography 
                             variant='h3'
                             gutterBottom
@@ -36,6 +91,8 @@ function Cadastro() {
                             >Cadastro
                         </Typography>
                         <TextField 
+                            value={user.nome}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id='nome'
                             label='nome'
                             variant='outlined'
@@ -44,16 +101,20 @@ function Cadastro() {
                             className='form-input-cadastro'
                             fullWidth 
                         />
-                        <TextField 
-                            id='usuario'
-                            label='usuario'
+                        <TextField
+                            value={user.email}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            id='email'
+                            label='e-mail'
                             variant='outlined'
-                            name='usuario'
+                            name='email'
                             margin='normal'
                             className='form-input-cadastro'
                             fullWidth 
                         />
                         <TextField 
+                            value={user.senha}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                             id='senha'
                             label='senha'
                             variant='outlined'
@@ -63,7 +124,9 @@ function Cadastro() {
                             type='password'
                             fullWidth 
                         />
-                        <TextField 
+                        <TextField
+                            value={confirmarSenha}
+                            onChange={(e:ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}
                             id='confirmarSenha'
                             label='confirmar senha'
                             variant='outlined'
@@ -74,16 +137,12 @@ function Cadastro() {
                             fullWidth 
                         />
                         <Box marginTop={2} textAlign='center' className='box-cadastro-button'>
-                            <Link to='/' className='text-decorator-none'>
-                                <Button variant='contained' color='secondary' className="form-btn">
-                                    Cancelar
-                                </Button>
-                            </Link>
-                            <Link to='/' className='text-decorator-none'>
-                                <Button type='submit' variant='contained' color='primary' className="form-btn">
-                                    Cadastrar
-                                </Button>
-                            </Link>
+                            <Button variant='contained' color='secondary' className="form-btn">
+                                Cancelar
+                            </Button>
+                            <Button type='submit' variant='contained' color='primary' className="form-btn">
+                                Cadastrar
+                            </Button>
                         </Box>
                     </form>
                 </Grid>
