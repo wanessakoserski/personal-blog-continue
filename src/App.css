@@ -1,1 +1,6 @@
-
+.main {
+    margin-top: 0;
+    padding: 0;
+    min-height: calc(100vh - 155px);
+    background-color: #dfc0d4;
+}

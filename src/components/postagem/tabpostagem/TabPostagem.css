@@ -1,3 +1,16 @@
 .titulo{
     font-weight: bold;
  }
+
+ .MuiTabs-centered {
+    background-color: #973b66;
+ }
+
+ .MuiTab-wrapper {
+    color: #fac7e8;
+    font-weight: bold;
+ }
+
+ .MuiTabPanel-root {
+    padding: auto !important;
+ }

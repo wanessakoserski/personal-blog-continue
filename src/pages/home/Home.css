@@ -2,15 +2,14 @@
 
 * {
     text-decoration: none;
-    color: #fac7e8;
+    color: #dfc0d4;
     font-family: 'Saira', sans-serif;
 }
 
 .home-main {
     display: flex;
     justify-content: space-between;
-    height: calc(100vh - 150px);
-    background-color: #fac7e8;
+    background-color: #973b66;
 }
 
 .button-main {
@@ -21,31 +20,32 @@
 }
 
 .MuiButton-outlined {
-    border: 2px solid #973b66 !important;
+    border: 2px solid #fac7e8 !important;
     padding: 5px 80px !important;
 }
 
 .MuiButton-outlined:hover {
-    background-color: #973b66 !important;
+    background-color: #fac7e8 !important;
+    border-color: #973b66 !important;
 }
 
 .MuiButton-outlined:hover a {
-    color: #fac7e8 !important;
+    color: #973b66 !important;
 }
 
 .button a {
-    color: #973b66 !important;
+    color: #fac7e8 !important;
     font-weight: bold;
 }
 
 .title {
-    color: #973b66;
+    color: #fac7e8;
     font-family: 'Saira', sans-serif;
     
 }
 
 .message {
-    color: #fac7e8;
+    color: #973b66;
     font-family: 'Saira', sans-serif;
     font-weight: 200;
     font-style: italic;

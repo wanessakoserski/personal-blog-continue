@@ -24,3 +24,14 @@
     font-family: 'Saira', sans-serif !important;
 }
 
+.nav-button {
+    border-top: 2px solid #973b66;
+    border-bottom: 2px solid #973b66;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.nav-button:hover {
+    border-top: 2px solid #dfc0d4;
+    border-bottom: 2px solid #dfc0d4;
+}

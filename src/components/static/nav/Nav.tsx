@@ -9,7 +9,7 @@ function Nav() {
     <>
         <AppBar position="static">
             <Toolbar variant="dense" className="nav-main">
-                <Box style={{ cursor: "pointer" }}>
+                <Box>
                     <Typography variant="h5" color="inherit" className="name">
                         Blog Pessoal
                     </Typography>
@@ -17,29 +17,30 @@ function Nav() {
 
                 <Box className="nav-tool">
                     <Link to='/home'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
+                        <Box mx={1} className='nav-button'>
                             <Typography variant="h6" color="inherit">
                                     home
                             </Typography>
                         </Box>
                     </Link>
                     
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            <a>
-                                postagens
-                            </a>
-                        </Typography>
-                    </Box>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            <a>
-                                temas
-                            </a>
-                        </Typography>
-                    </Box>
+                    <Link to='/posts'>
+                        <Box mx={1} className='nav-button'>
+                            <Typography variant="h6" color="inherit">
+                                    postagens
+                            </Typography>
+                        </Box>
+                    </Link>
+
+                    <Link to='/temas'>
+                        <Box mx={1} className='nav-button'>
+                            <Typography variant="h6" color="inherit">
+                                    temas
+                            </Typography>
+                        </Box>
+                    </Link>
                    
-                        <Box mx={1} style={{ cursor: "pointer" }}>
+                        <Box mx={1} className='nav-button'>
                             <Typography variant="h6" color="inherit">
                                 <a>
                                     novo tema
@@ -48,7 +49,7 @@ function Nav() {
                         </Box>
                    
                     <Link to='/'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
+                        <Box mx={1} className='nav-button'>
                             <Typography variant="h6" color="inherit">
                                     logout
                             </Typography>

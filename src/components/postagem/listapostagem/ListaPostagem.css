@@ -1,3 +1,12 @@
 .text-decorator-none{
     text-decoration: none;
 }
+
+.css-1c5ij41 {
+    margin: 0 !important;
+    border: 16px solid #dfc0d4;
+}
+
+.MuiTabPanel-root {
+    background-color: #dfc0d4;
+}
