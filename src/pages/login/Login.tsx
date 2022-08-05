@@ -48,7 +48,7 @@ function Login() {
             className="part"
             direction='row'
         >
-            <Grid alignItems='center' xs={6} >
+            <Grid item alignItems='center' xs={6} >
                 <Box paddingX={20} className="card">
                     <form onSubmit={onSubmit}>
                         <Typography 
@@ -103,7 +103,7 @@ function Login() {
                     </Box>
                 </Box>
             </Grid>
-            <Grid xs={6} style={{
+            <Grid item xs={6} style={{
                 backgroundImage: `url(https://i.imgur.com/RBo7au0.png)`,
                 backgroundRepeat: 'no-repeat',
                 width: '100vh', minHeight: 'calc(100vh - 150px)', 
