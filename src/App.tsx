@@ -9,6 +9,10 @@ import Cadastro from './pages/cadastro/Cadastro';
 import './App.css';
 import ListaTema from './components/tema/listatema/ListaTema';
 import ListaPostagem from './components/postagem/listapostagem/ListaPostagem';
+import CadastroPost from './components/postagem/cadastrar/Cadastro';
+import CadastroTema from './components/tema/cadastrar/Cadastro';
+import DeletarPostagem from './components/postagem/deletar/Deletar';
+import DeletarTema from './components/tema/deletar/Deletar';
 
 function App() {
   return(
@@ -22,6 +26,12 @@ function App() {
             <Route path="/cadastro" element={ <Cadastro /> } />
             <Route path="/temas" element={ <ListaTema /> } />
             <Route path="/posts" element={ <ListaPostagem /> } />
+            <Route path="/formularioPost" element={ <CadastroPost /> } />
+            <Route path="/formularioPost/:id" element={ <CadastroPost /> } />
+            <Route path="/formularioTema" element={<CadastroTema />} />
+            <Route path="/formularioTema/:id" element={<CadastroTema />} />
+            <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
+            <Route path="/deletarTema/:id" element={<DeletarTema />} />
           </Routes>
         </div>
       <Footer />
