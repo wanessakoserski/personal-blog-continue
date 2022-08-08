@@ -1,0 +1,7 @@
+.cursor{
+    cursor: pointer;
+}
+
+.btnModal:hover {
+    color: #973b66 !important;
+}
