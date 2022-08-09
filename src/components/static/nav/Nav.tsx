@@ -3,15 +3,20 @@ import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from "@mui/material";
 import { Link, useNavigate } from 'react-router-dom';
 import './Nav.css';
-import useLocalStorage from "react-use-localstorage";
+import { useDispatch, useSelector } from "react-redux";
+import { TokenState } from "../../../store/tokens/tokensReducer";
+import { addToken } from "../../../store/tokens/actions";
 
 function Nav() {
 
-    const [token, setToken] = useLocalStorage('token');
     let history = useNavigate();
+    const dispatch = useDispatch();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+      );
 
     function goLogout() {
-        setToken('')
+        dispatch(addToken(''));
         alert('Usuário deslogado')
         history('/login')
     }

@@ -4,13 +4,16 @@ import { Box } from "@mui/material";
 import './Home.css';
 import TabPostagem from '../../components/postagem/tabpostagem/TabPostagem';
 import { useNavigate } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
 import ModalPostagem from '../../components/postagem/modal/ModalPostagem';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../store/tokens/tokensReducer';
 
 function Home() {
 
   let history = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
     
     useEffect(() => {
       if (token == "") {
