@@ -3,7 +3,7 @@ import { Button, Grid, Typography } from '@material-ui/core';
 import { Box } from "@mui/material";
 import './Home.css';
 import TabPostagem from '../../components/postagem/tabpostagem/TabPostagem';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ModalPostagem from '../../components/postagem/modal/ModalPostagem';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
@@ -55,9 +55,11 @@ function Home() {
               <Box marginRight={1}>
                 <ModalPostagem />
               </Box>
-              <Button variant="outlined" className='button'>
-                  Feed
-              </Button>
+              <Link to='/posts'>
+                <Button variant="outlined" className='button'>
+                    Feed
+                </Button>
+              </Link>
             </Box>
           </Grid>
           <Grid item xs={6}
