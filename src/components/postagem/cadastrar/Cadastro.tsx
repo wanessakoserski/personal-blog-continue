@@ -8,6 +8,7 @@ import './Cadastro.css';
 import { buscar, buscarId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
 
 function Cadastro() {
 
@@ -20,7 +21,16 @@ function Cadastro() {
 
     useEffect(() => {
         if(token == '') {
-            alert('Você precisa estar logado')
+            toast.info('Você precisa estar logado', {
+                position: "top-center",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
             history('/login')
         }
     }, [token])
@@ -63,7 +73,7 @@ function Cadastro() {
     }
 
     async function findByIdPostagem(id: string) {
-        await buscarId(`postagens/${id}`, setPostagem, {
+        await buscarId(`/postagens/${id}`, setPostagem, {
             headers: {
                 'Authorization': token
             }
@@ -87,14 +97,43 @@ function Cadastro() {
                     'Authorization': token
                 }
             })
-            alert('Postagem atualizado com sucesso');
-        } else {
+            toast.success('Postagem atualizada com sucesso', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
+        } else if(id === undefined) {
             post(`/postagens`, postagem, setPostagem, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Postagem cadastrada com sucesso');
+            toast.success('Postagem cadastrada com sucesso', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
+        } else {
+            toast.error('Erro ao tentar subir postagem', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
         }
         back()
     }

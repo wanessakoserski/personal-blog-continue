@@ -7,6 +7,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { buscarId } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
 
 function Cadastro() {
 
@@ -23,7 +24,16 @@ function Cadastro() {
 
     useEffect(() => {
         if(token == '') {
-            alert('Você precisa estar logado')
+            toast.info('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
             history('/login')
         }
     }, [token])
@@ -59,15 +69,44 @@ function Cadastro() {
                 headers: {
                     'Authorization': token
                 }
-            })
-            alert('Tema atualizado com sucesso');
-        } else {
+            }) 
+            toast.success('Tema atualizado com sucesso', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
+        } else if(id === undefined) {
             post(`/tema`, tema, setTema, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Tema cadastrado com sucesso');
+            toast.success('Tema cadastrado com sucesso', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
+        } else {
+            toast.error('Erro ao tentar subir tema', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined
+            });
         }
         back()
     }
@@ -80,7 +119,7 @@ function Cadastro() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="novo-tema" label="novo tema" variant="outlined" name="novo-tema" margin="normal" fullWidth />
+                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="novo tema" variant="outlined" name="tema" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

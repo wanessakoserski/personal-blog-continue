@@ -4,3 +4,8 @@
     min-height: calc(100vh - 155px);
     background-color: #dfc0d4;
 }
+
+.Toastify__toast-container {
+    width: 40% !important;
+    margin-top: 70px !important;
+}

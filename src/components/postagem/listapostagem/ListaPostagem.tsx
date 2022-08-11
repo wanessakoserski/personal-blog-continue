@@ -7,18 +7,28 @@ import Postagem from '../../../models/Postagem';
 import { buscar } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import {toast} from 'react-toastify';
 
 function ListaPostagem() {
 
-  const [posts, setPosts] = useState<Postagem[]>([])
   let history = useNavigate();
+  const [posts, setPosts] = useState<Postagem[]>([])
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
 
   useEffect(() => {
     if(token == '') {
-      alert('Você precisa estar logado')
+      toast.info('você precisa estar logado', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined
+      });
       history('/login')
     }
   }, [token])

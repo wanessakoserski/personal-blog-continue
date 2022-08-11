@@ -1,3 +1,7 @@
 .topo{
     margin-top: 20px;
 }
+
+.Toastify__toast-theme--colored.Toastify__toast--default { 
+    color: white !important;
+}

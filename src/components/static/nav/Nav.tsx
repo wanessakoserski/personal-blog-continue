@@ -6,6 +6,7 @@ import './Nav.css';
 import { useDispatch, useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { addToken } from "../../../store/tokens/actions";
+import {toast} from 'react-toastify';
 
 function Nav() {
 
@@ -17,7 +18,16 @@ function Nav() {
 
     function goLogout() {
         dispatch(addToken(''));
-        alert('Usuário deslogado')
+        toast.info('Usuário foi deslogado', {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: false,
+            theme: "colored",
+            progress: undefined
+          });
         history('/login')
     }
 
