@@ -22,7 +22,7 @@ function Cadastro() {
     useEffect(() => {
         if(token == '') {
             toast.info('Você precisa estar logado', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
