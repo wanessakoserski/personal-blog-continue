@@ -36,3 +36,16 @@
     border-top: 2px solid #dfc0d4;
     border-bottom: 2px solid #dfc0d4;
 }
+
+@media screen and (max-width: 825px) {
+    .nav-main {
+        display: grid;
+        height: 110%;
+        text-align: center;
+    }
+
+    .nav-tool {
+        display: block;
+        margin: 4px;
+    }
+}
