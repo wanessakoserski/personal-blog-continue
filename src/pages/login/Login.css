@@ -73,3 +73,34 @@ label{
 .MuiInput-underline {
     border:5px solid #973b66 !important;
 }
+
+.login-image {
+    background-image: url(https://i.imgur.com/RBo7au0.png);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: calc(100vh - 150px);
+    background-size: cover;
+    background-position: center center;
+}
+
+@media screen and (max-width: 1230px) {
+    .login-image {
+        display: none;
+    }
+
+    .card {
+        margin: 0;
+        height: 75vh;
+        width: 75vw;
+        padding: auto;
+    }
+
+    .css-l44j74 {
+        padding: auto !important;
+    }
+
+    .part {
+        display: block !important;
+        padding: 5%;
+    }
+}
