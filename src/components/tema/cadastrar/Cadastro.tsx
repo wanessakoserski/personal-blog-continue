@@ -116,15 +116,19 @@ function Cadastro() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
-            <form onSubmit={onSubmit}>
-                <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
-                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="novo tema" variant="outlined" name="tema" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
-                    Finalizar
-                </Button>
-            </form>
-        </Container>
+        <div >
+            <Container maxWidth="sm" className="topo">
+                <form onSubmit={onSubmit}>
+                    <div className='tema-form'>
+                    <Typography variant="h3" className='titulo-tema-form' color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
+                    <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="novo tema" variant="outlined" name="tema" margin="normal" fullWidth />
+                    <Button type="submit" variant="contained" color="primary">
+                        Finalizar
+                    </Button>
+                    </div>
+                </form>
+            </Container>
+        </div>
     )
 }
 

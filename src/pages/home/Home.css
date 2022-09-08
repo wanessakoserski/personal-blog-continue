@@ -66,3 +66,34 @@
     color: #973b66 !important;
     font-weight: bold;
 }
+
+@media screen and (max-width: 1200px) {
+    .MuiButton-outlined {
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    .home-main {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .button-main {
+        align-items: center;
+        flex-direction: column !important;
+        margin: auto;
+        padding: auto;
+    }
+
+    .MuiButton-outlined {
+        margin: auto;
+        width: 100%;
+        margin-top: 10px !important;
+    }
+
+    .MuiTypography-h3 {
+        margin-top: 50px !important;
+    }
+}
