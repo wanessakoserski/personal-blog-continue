@@ -119,7 +119,7 @@ function Login() {
                             <Typography variant='subtitle1' gutterBottom align='center' className="mine-text">Não tem uma conta?</Typography>
                         </Box>
                         <Link to='/cadastro'>
-                            <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }} className="mine-text">Cadastra-se</Typography>
+                            <Typography variant='subtitle1' gutterBottom align='center' style={{ fontWeight: 'bold' }} className="mine-text cadastra-text">Cadastra-se</Typography>
                         </Link>
                     </Box>
                 </Box>

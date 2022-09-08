@@ -10,10 +10,12 @@
 
 .MuiButton-containedPrimary {
     background-color: #973b66 !important;
+    transition: all 0.3s !important;
 }
 
 .mine-text {
     color: #973b66;
+    transition: all 0.5s !important;
 }
 
 .MuiTypography-subtitle1 {
@@ -81,6 +83,14 @@ label{
     min-height: calc(100vh - 150px);
     background-size: cover;
     background-position: center center;
+}
+
+.cadastra-text:hover {
+    text-decoration: underline;
+}
+
+.MuiButton-containedPrimary:hover {
+    background-color: #9c466e96 !important;
 }
 
 @media screen and (max-width: 1230px) {
