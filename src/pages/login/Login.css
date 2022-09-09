@@ -93,6 +93,10 @@ label{
     background-color: #9c466e96 !important;
 }
 
+.MuiGrid-container {
+    align-items: center;
+}
+
 @media screen and (max-width: 1230px) {
     .login-image {
         display: none;
@@ -101,7 +105,7 @@ label{
     .card {
         margin: 0;
         height: 75vh;
-        width: 75vw;
+        width: 75vw !important;
         padding: auto;
     }
 
@@ -109,7 +113,7 @@ label{
         padding: auto !important;
     }
 
-    .part {
+    .part-login {
         display: block !important;
         padding: 5%;
     }

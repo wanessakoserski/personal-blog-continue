@@ -87,6 +87,7 @@ function Cadastro() {
                 direction='row'
                 justifyContent='center'
                 alignItems='center'
+                className="part-cadastro"
             >
                 <Grid
                     item

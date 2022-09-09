@@ -66,7 +66,7 @@ function Login() {
 
     return(
         <Grid container
-            className="part"
+            className="part-login"
             direction='row'
         >
             <Grid item alignItems='center' xs={6} >
