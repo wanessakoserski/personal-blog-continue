@@ -116,7 +116,7 @@ function Cadastro() {
     }
 
     return (
-        <div >
+        <div className='div-form-tema'>
             <Container maxWidth="sm" className="topo">
                 <form onSubmit={onSubmit}>
                     <div className='tema-form'>

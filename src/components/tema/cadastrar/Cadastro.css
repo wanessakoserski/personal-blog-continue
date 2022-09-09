@@ -11,6 +11,15 @@
     background-color: #ff2c76bd !important;
 }
 
+.titulo-tema-form {
+    margin-top: 0;
+}
+
+.div-form-tema {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 @media screen and (max-width: 1230px) {
     .imagem-cadastro {
         display: none;
@@ -19,6 +28,12 @@
     .part-cadastro {
         display: block !important;
         padding: 5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .titulo-tema-form {
+        font-size: 40px !important;
     }
 }
 
