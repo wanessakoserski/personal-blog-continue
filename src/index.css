@@ -9,3 +9,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiOutlinedInput-input {
+  color: #973b66 !important;
+}
+
+.MuiFormLabel-root{
+  font-family: 'Saira', sans-serif !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #973b66 !important;
+}
+
+.MuiInputBase-input:-webkit-autofill {
+  -webkit-text-fill-color: #973b66!important;
+  -webkit-box-shadow: 0 0 0 30px #db2b7d50 inset !important;
+}
