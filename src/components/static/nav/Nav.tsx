@@ -51,7 +51,7 @@ function Nav() {
                                         </Box>
                                     </Link>
 
-                                    <Link to='/posts'>
+                                    <Link to='/usuarios'>
                                         <Box mx={1} className='nav-button'>
                                             <Typography variant="h6" color="inherit">
                                                     usuários

@@ -17,6 +17,7 @@ import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import store from './store/store';
 import 'react-toastify/dist/ReactToastify.css';
+import ListaUsuario from './components/usuario/listausuario/ListaUsuario';
 
 function App() {
   return(
@@ -35,6 +36,7 @@ function App() {
               <Route path="/cadastro" element={ <Cadastro /> } />
               <Route path="/temas" element={ <ListaTema /> } />
               <Route path="/posts" element={ <ListaPostagem /> } />
+              <Route path="/usuarios" element={ <ListaUsuario /> } />
               <Route path="/formularioPost" element={ <CadastroPost /> } />
               <Route path="/formularioPost/:id" element={ <CadastroPost /> } />
               <Route path="/formularioTema" element={<CadastroTema />} />
