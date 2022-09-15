@@ -5,3 +5,7 @@
 .Toastify__toast-theme--colored.Toastify__toast--default { 
     color: white !important;
 }
+
+.MuiOutlinedInput-inputMultiline{
+    padding: 16px !important;
+}

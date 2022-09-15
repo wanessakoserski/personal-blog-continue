@@ -9,8 +9,8 @@ import CadastroPost from '../cadastrar/Cadastro';
 
 
 function getModalStyle() {
-  const top = 50 ;
-  const left = 50;
+  const top = 10 ;
+  const left = 10;
 
   return {
     top: `${top}%`,
@@ -49,11 +49,9 @@ function ModalPostagem () {
     <div style={modalStyle} className={classes.paper}>
       <Box display="flex" justifyContent="flex-end" className="cursor">
         <CloseIcon onClick={handleClose}/>
-      
       </Box>
       
-      <CadastroPost/>
-      
+      <CadastroPost/>    
     </div>
   );
 
@@ -74,4 +72,4 @@ function ModalPostagem () {
     </div>
   );
 }
-export default ModalPostagem
+export default ModalPostagem;
