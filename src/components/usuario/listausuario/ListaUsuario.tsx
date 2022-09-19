@@ -66,10 +66,13 @@ function ListaUsuario() {
                     <Card variant="outlined">
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
-                        Tema
+                            Usuário {usuario.id}
                         </Typography>
                         <Typography variant="h5" component="h2">
-                        {usuario.nome}
+                            {usuario.nome}
+                        </Typography>
+                        <Typography variant="body2" component="p">
+                            {usuario.email}
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -82,7 +85,7 @@ function ListaUsuario() {
                             </Button>
                             </Box>
                         </Link>
-                        <Link to={`/home`} className="text-decorator-none">
+                        <Link to={`/deletarUsuario/${usuario.id}`} className="text-decorator-none">
                             <Box mx={1}>
                             <Button variant="contained" size='small' color="secondary">
                                 deletar

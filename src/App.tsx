@@ -13,6 +13,7 @@ import CadastroPost from './components/postagem/cadastrar/Cadastro';
 import CadastroTema from './components/tema/cadastrar/Cadastro';
 import DeletarPostagem from './components/postagem/deletar/Deletar';
 import DeletarTema from './components/tema/deletar/Deletar';
+import DeletarUsuario from './components/usuario/deletar/Deletar';
 import { Provider } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import store from './store/store';
@@ -43,6 +44,7 @@ function App() {
               <Route path="/formularioTema/:id" element={<CadastroTema />} />
               <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
               <Route path="/deletarTema/:id" element={<DeletarTema />} />
+              <Route path="/deletarUsuario/:id" element={<DeletarUsuario />} />
             </Routes>
           </div>
         <Footer />
